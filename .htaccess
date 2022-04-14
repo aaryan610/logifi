@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI}  !\.(?:css|js|jpe?g|gif|png)$ [NC]
+
+ErrorDocument 404 /404.html
+
+RewriteRule    ^news/([A-Za-z0-9-\.]+)/([A-Za-z0-9-\.]+)/?$    news/index.php?code=$2    [NC,L]
+RewriteRule    ^courses/([A-Za-z0-9-\.]+)/([A-Za-z0-9-\.]+)/?$    courses/index.php?code=$2    [NC,L]
+RewriteRule    ^topics/([A-Za-z0-9-\.]+)/([A-Za-z0-9-\.]+)/?$    topics/index.php?code=$2    [NC,L]
+
+RewriteRule    ^qna/([A-Za-z0-9-\.]+)/([A-Za-z0-9-\.]+)/?$    qna/index.php?classCode=$2    [NC,L]
+
+RewriteRule    ^qna/([A-Za-z0-9-\.]+)/([A-Za-z0-9-\.]+)/([A-Za-z0-9-\.]+)/?$    qna/index.php?chapterCode=$3    [NC,L]
+
+RewriteRule    ^([A-Za-z0-9-\.]+).html/?$    pages/index.php?page=$1    [NC,L]

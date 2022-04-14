@@ -1,3 +1,8 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .header {
   height: 30vh;
 }
@@ -7,14 +12,19 @@
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
+  &.registerBody {
+    height: 100vh;
+    border-radius: 0;
+  }
+
   .inputGroup {
     label {
       background-color: var(--bg-grey);
-      color: #000;
     }
   }
 
-  .loginSection {
+  .loginSection,
+  .registerSection {
     display: none;
 
     &.active {

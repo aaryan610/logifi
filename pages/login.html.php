@@ -9,7 +9,7 @@
     <?php include "./header.html.php"; ?>
 
     <link rel="stylesheet" href="./assets/css/common.css">
-    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/auth.css">
 </head>
 <body>
     <?php include "./navbar.html.php"; ?>
@@ -62,6 +62,11 @@
                             <button type="button" class="w-100" onclick="loginFunction('submit')">Sign In</button>
                         </div>
                     </div>
+                    <div class="col-lg-12 mt-2">
+                        <div class="inputGroup">
+                            <button type="button" class="w-100" onclick="loginFunction(1)">Go Back</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>
@@ -70,7 +75,7 @@
             <img src="./assets/images/logos/google.png" alt="Continue to Logifi with Google" />
             Continue with Google
         </button>
-        <p class="text-center mt-4"><a href="#">Sign up</a> to create a new account.</p>
+        <p class="text-center mt-4"><a href="./register.html.php">Sign up</a> to create a new account.</p>
     </div>
 
     <?php include "./footer.html.php"; ?>
@@ -82,7 +87,7 @@
                 let flag = 0;
                 let mobileNoFlag = 0;
 
-                if($("#mobileNo").val().length == null)
+                if($("#mobileNo").val() == "")
                     flag++;
 
                 if($("#mobileNo").val().length != null && $("#mobileNo").val().length != 10)
@@ -92,7 +97,7 @@
                     $(".loginSection").removeClass("active");
                     $(".loginSection2").addClass("active");
                 } else if(flag != 0)
-                    alert("Please fill out all the fields!");
+                    alert("Please fill out all the required fields!");
                 else
                     alert("Please enter a valid mobile no.");
             } else if(section === "submit") {
@@ -101,14 +106,16 @@
 
                 let matchOtp = 1111;
 
-                if($("#otp").val().length == null)
+                if($("#otp").val() == "")
                     flag++;
-
-                if($("#otp").val().length != null && $("#otp").val().length != 4)
-                    otpFlag++;
-                
-                if($("#otp").val().length === 4 && $("#otp").val() != matchOtp)
-                    otpFlag++;
+                else {
+                    if($("#otp").val().length === 4) {
+                        if($("#otp").val() != matchOtp)
+                            otpFlag++;
+                    }
+                    else
+                        otpFlag++;
+                }
 
                 if(flag === 0 && otpFlag === 0)
                     $("#loginForm").submit();
