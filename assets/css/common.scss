@@ -1,0 +1,165 @@
+/* Variables for Light and Dark Modes */
+:root {
+  --theme-clr: #fc7600;
+  --gray-txt-clr: #616161;
+  --success-clr: #018786;
+  --error-clr: #b00020;
+  --hover-blue: #004e89; //Or #1569c7
+  --bg-grey: #eae7ee;
+  --primary-font: "Poppins", sans-serif;
+}
+
+html[theme="light"] {
+  --bg-clr: #ebf5fc;
+  --bg-sec-clr: #fff;
+  --bg-ter-clr: #f0f0f0;
+  --txt-clr: #222831;
+  --box-shadow: 5px 5px 10px #c8d0d6, -5px -5px 10px #fff;
+}
+
+html[theme="dark"] {
+  --bg-clr: #292929;
+  --bg-sec-clr: #121212;
+  --bg-ter-clr: #1e1e1e;
+  --txt-clr: #ebf5fc;
+  --box-shadow: 5px 5px 10px #232323, -5px -5px 10px #2f2f2f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
+a {
+  color: var(--theme-clr);
+}
+
+::selection {
+  background-color: var(--theme-clr);
+  color: #fff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.textTheme {
+  color: var(--theme-clr);
+}
+
+.bgGrey {
+  background-color: var(--bg-grey);
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column-reverse;
+
+  input {
+    background-color: inherit;
+    color: #000;
+    font-size: 1em;
+    padding: 10px 10px;
+    border: none;
+    border: 2px solid #d3d3d3;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    transition: 0.3s all ease;
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      border-color: var(--theme-clr);
+
+      & ~ label {
+        transform: translate(10px, -33px) scale(0.9);
+        color: var(--theme-clr);
+        padding: 0 5px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    padding: 0 20px;
+    margin-bottom: 2px;
+    color: darkgray;
+    background-color: #fff;
+    transform: translate(4px, -11px) scale(1.02);
+    transform-origin: left top;
+    cursor: pointer;
+    transition: 0.3s all ease;
+  }
+
+  select {
+    border: none;
+    margin: 1.5em 0 0;
+    border-bottom: 2px solid #000;
+    padding-bottom: 14px;
+    padding-left: 10px;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+  }
+
+  button {
+    padding: 10px 30px;
+    background-color: var(--theme-clr);
+    border: 2px solid var(--theme-clr);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    width: min-content;
+    white-space: nowrap;
+    color: #fff;
+    transition: 0.3s all ease;
+  }
+
+  &.textarea {
+    input {
+      height: 200px;
+
+      &:focus,
+      &:not(:placeholder-shown) {
+        & ~ label {
+          transform: translate(10px, -183px) scale(0.9);
+        }
+      }
+    }
+
+    label {
+      transform: translate(4px, -150px) scale(1.02);
+    }
+  }
+}

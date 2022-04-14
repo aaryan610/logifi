@@ -1,0 +1,47 @@
+.header {
+  height: 30vh;
+}
+
+.body {
+  height: 70vh;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.body .inputGroup label {
+  background-color: var(--bg-grey);
+  color: #000;
+}
+
+.body .loginSection {
+  display: none;
+}
+
+.body .loginSection.active {
+  display: block;
+}
+
+.googleBtn {
+  background: transparent;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 30px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.9rem;
+}
+
+.googleBtn img {
+  height: 15px;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=login.css.map */

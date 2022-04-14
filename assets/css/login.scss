@@ -1,0 +1,42 @@
+.header {
+  height: 30vh;
+}
+
+.body {
+  height: 70vh;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  .inputGroup {
+    label {
+      background-color: var(--bg-grey);
+      color: #000;
+    }
+  }
+
+  .loginSection {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.googleBtn {
+  background: transparent;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+
+  img {
+    height: 15px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,197 @@
+/* Variables for Light and Dark Modes */
+:root {
+  --theme-clr: #fc7600;
+  --gray-txt-clr: #616161;
+  --success-clr: #018786;
+  --error-clr: #b00020;
+  --hover-blue: #004e89;
+  --bg-grey: #eae7ee;
+  --primary-font: "Poppins", sans-serif;
+}
+
+html[theme="light"] {
+  --bg-clr: #ebf5fc;
+  --bg-sec-clr: #fff;
+  --bg-ter-clr: #f0f0f0;
+  --txt-clr: #222831;
+  --box-shadow: 5px 5px 10px #c8d0d6, -5px -5px 10px #fff;
+}
+
+html[theme="dark"] {
+  --bg-clr: #292929;
+  --bg-sec-clr: #121212;
+  --bg-ter-clr: #1e1e1e;
+  --txt-clr: #ebf5fc;
+  --box-shadow: 5px 5px 10px #232323, -5px -5px 10px #2f2f2f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
+a {
+  color: var(--theme-clr);
+}
+
+::-moz-selection {
+  background-color: var(--theme-clr);
+  color: #fff;
+}
+
+::selection {
+  background-color: var(--theme-clr);
+  color: #fff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.textTheme {
+  color: var(--theme-clr);
+}
+
+.bgGrey {
+  background-color: var(--bg-grey);
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.grid2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+}
+
+.grid3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+
+.inputGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.inputGroup input {
+  background-color: inherit;
+  color: #000;
+  font-size: 1em;
+  padding: 10px 10px;
+  border: none;
+  border: 2px solid #d3d3d3;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.inputGroup input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.inputGroup input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.inputGroup input::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.inputGroup input::placeholder {
+  opacity: 0;
+}
+
+.inputGroup input:focus, .inputGroup input:not(:placeholder-shown) {
+  border-color: var(--theme-clr);
+}
+
+.inputGroup input:focus ~ label, .inputGroup input:not(:placeholder-shown) ~ label {
+  -webkit-transform: translate(10px, -33px) scale(0.9);
+          transform: translate(10px, -33px) scale(0.9);
+  color: var(--theme-clr);
+  padding: 0 5px;
+  font-weight: 500;
+}
+
+.inputGroup label {
+  position: absolute;
+  padding: 0 20px;
+  margin-bottom: 2px;
+  color: darkgray;
+  background-color: #fff;
+  -webkit-transform: translate(4px, -11px) scale(1.02);
+          transform: translate(4px, -11px) scale(1.02);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.inputGroup select {
+  border: none;
+  margin: 1.5em 0 0;
+  border-bottom: 2px solid #000;
+  padding-bottom: 14px;
+  padding-left: 10px;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.inputGroup button {
+  padding: 10px 30px;
+  background-color: var(--theme-clr);
+  border: 2px solid var(--theme-clr);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
+  color: #fff;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.inputGroup.textarea input {
+  height: 200px;
+}
+
+.inputGroup.textarea input:focus ~ label, .inputGroup.textarea input:not(:placeholder-shown) ~ label {
+  -webkit-transform: translate(10px, -183px) scale(0.9);
+          transform: translate(10px, -183px) scale(0.9);
+}
+
+.inputGroup.textarea label {
+  -webkit-transform: translate(4px, -150px) scale(1.02);
+          transform: translate(4px, -150px) scale(1.02);
+}
+/*# sourceMappingURL=common.css.map */
