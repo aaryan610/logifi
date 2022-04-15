@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    <?php include "./header.html.php"; ?>
+    <?php include "../header.html.php"; ?>
 
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/auth.css">
 </head>
 <body>
-    <?php include "./navbar.html.php"; ?>
-    
     <div class="header">
         <img src="./assets/images/login.png" alt="" class="img-fluid">
     </div>
@@ -75,11 +73,10 @@
             <img src="./assets/images/logos/google.png" alt="Continue to Logifi with Google" />
             Continue with Google
         </button>
-        <p class="text-center mt-4"><a href="./register.html.php">Sign up</a> to create a new account.</p>
+        <p class="text-center mt-4"><a href="./register.html">Sign up</a> to create a new account.</p>
     </div>
 
-    <?php include "./footer.html.php"; ?>
-    <?php include "./scripts.html.php"; ?>
+    <?php include "../scripts.html.php"; ?>
 
     <script>
         function loginFunction(section) {

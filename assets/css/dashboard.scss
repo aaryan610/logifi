@@ -1,0 +1,91 @@
+body {
+  background-color: var(--bg-clr);
+}
+
+.bookingCard {
+  min-height: 100px;
+  width: 100%;
+  border-radius: 7px;
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  p {
+    font-size: 0.7rem;
+    margin: 0.5rem 0 1rem;
+    color: #fff;
+  }
+
+  a {
+    color: var(--theme-clr);
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+}
+
+.bookingsList {
+  .singleBooking {
+    display: block;
+    padding: 24px 16px;
+    background-color: var(--sec-bg-clr);
+    border-radius: 7px;
+    color: var(--txt-clr);
+    text-decoration: none;
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+
+    .bookingHeader {
+      display: grid;
+      grid-template-columns: 45px auto;
+
+      .icon {
+        height: 45px;
+        width: 45px;
+        border-radius: 7px;
+        display: grid;
+        place-items: center;
+      }
+
+      .title {
+        margin-left: 1em;
+
+        h4 {
+          font-size: 0.9rem;
+        }
+
+        h6 {
+          font-size: 0.7rem;
+          color: var(--dark-grey-txt);
+          margin-top: 0.5em;
+        }
+      }
+    }
+
+    .bookingBody {
+      margin-top: 1em;
+
+      .list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 1em;
+
+        .singleItem {
+          .title {
+            color: var(--dark-grey-txt);
+            font-size: 0.7rem;
+          }
+
+          .value {
+            font-size: 0.9rem;
+            margin-top: 0.3em;
+          }
+        }
+      }
+    }
+  }
+}

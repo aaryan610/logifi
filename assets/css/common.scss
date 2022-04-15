@@ -1,29 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* Variables for Light and Dark Modes */
 :root {
   --theme-clr: #fc7600;
   --gray-txt-clr: #616161;
-  --success-clr: #018786;
-  --error-clr: #b00020;
-  --hover-blue: #004e89; //Or #1569c7
   --bg-grey: #eae7ee;
+
+  //Text colours
+  --light-grey-txt: #c1c7c9;
+  --dark-grey-txt: #707c80;
+
+  //Situation based colours
+  --bg-danger: #ffe9e9;
+  --clr-danger: #f33066;
+  --bg-success: #cff7e4;
+  --clr-success: #10d876;
+  --bg-warning: #ffead6;
+  --clr-warning: #fe9431;
+  --bg-primary: #d2e3ff;
+  --clr-primary: #1e74fd;
+
+  // Fonts
   --primary-font: "Poppins", sans-serif;
+
+  //Light Mode Specific
+  // --bg-clr: #fff;
+  // --sec-bg-clr: #f3f4f5;
+  // --ter-bg-clr: #e5e5e8;
+  // #111318
 }
 
-html[theme="light"] {
+body[theme="light"] {
   --bg-clr: #ebf5fc;
-  --bg-sec-clr: #fff;
-  --bg-ter-clr: #f0f0f0;
+  --sec-bg-clr: #fff;
+  --ter-bg-clr: #f0f0f0;
   --txt-clr: #222831;
+  --inverse-txt-clr: #ebf5fc;
   --box-shadow: 5px 5px 10px #c8d0d6, -5px -5px 10px #fff;
 }
 
-html[theme="dark"] {
+body[theme="dark"] {
   --bg-clr: #292929;
-  --bg-sec-clr: #121212;
-  --bg-ter-clr: #1e1e1e;
+  --sec-bg-clr: #121212;
+  --ter-bg-clr: #1e1e1e;
   --txt-clr: #ebf5fc;
+  --inverse-txt-clr: #222831;
   --box-shadow: 5px 5px 10px #232323, -5px -5px 10px #2f2f2f;
 }
 
@@ -32,6 +52,22 @@ html[theme="dark"] {
   padding: 0;
   box-sizing: border-box;
   font-family: var(--primary-font);
+}
+
+html {
+  font-size: 15px;
+  color: var(--txt-clr);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color: var(--txt-clr);
 }
 
 a {
@@ -61,10 +97,49 @@ input[type="number"] {
   background-color: var(--bg-grey);
 }
 
+.gradient {
+  background: rgb(255, 101, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 101, 1, 1) 0%,
+    rgba(254, 122, 1, 1) 35%,
+    rgba(255, 192, 1, 1) 100%
+  );
+}
+
+.success {
+  background-color: var(--bg-success);
+  color: var(--clr-success);
+}
+
+.danger {
+  background-color: var(--bg-danger);
+  color: var(--clr-danger);
+}
+
+.primary {
+  background-color: var(--bg-primary);
+  color: var(--clr-primary);
+}
+
+.warning {
+  background-color: var(--bg-warning);
+  color: var(--clr-warning);
+}
+
 button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.btnWhite {
+  background-color: #fff;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .grid2 {
@@ -164,4 +239,88 @@ button {
       transform: translate(4px, -150px) scale(1.02);
     }
   }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .icon {
+    height: 35px;
+    width: 35px;
+    background-color: var(--sec-bg-clr);
+    color: var(--txt-clr);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+  }
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  height: 8vh;
+  background-color: #000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: grid;
+  place-items: center;
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    width: 100%;
+
+    .singleLink {
+      text-align: center;
+      transition: 0.3s all ease;
+
+      .icon {
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      &.active,
+      &:hover {
+        margin-top: -12px;
+
+        .icon {
+          position: relative;
+
+          svg {
+            stroke: var(--theme-clr);
+          }
+
+          &::after {
+            position: absolute;
+            content: "";
+            height: 3px;
+            width: 20px;
+            border-radius: 3px;
+            text-align: center;
+            background-color: var(--theme-clr);
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 000Webhost Disclaimer
+.disclaimer {
+  display: none !important;
 }

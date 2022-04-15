@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Driver Register</title>
 
-    <?php include "./header.html.php"; ?>
+    <?php include "../header.html.php"; ?>
 
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/auth.css">
 </head>
 <body>
-    <?php include "./navbar.html.php"; ?>
     <div class="body registerBody bgGrey p-4">
         <form id="registerForm" autocomplete="off">
             <div class="row">
@@ -104,11 +103,10 @@
             <img src="./assets/images/logos/google.png" alt="Continue to Logifi with Google" />
             Continue with Google
         </button>
-        <p class="text-center mt-4"><a href="./login.html.php">Sign in</a> if you already have an account.</p>
+        <p class="text-center mt-4"><a href="./login.html">Sign in</a> if you already have an account.</p>
     </div>
 
-    <?php include "./footer.html.php"; ?>
-    <?php include "./scripts.html.php"; ?>
+    <?php include "../scripts.html.php"; ?>
 
     <script>
         function registerFunction(section) {

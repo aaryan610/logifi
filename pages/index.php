@@ -111,6 +111,12 @@
 		exit();
 	}
 
+	if(isset($_GET['page']) and $_GET['page']=='profile')
+	{
+		include 'profile.html.php';
+		exit();
+	}
+
 ////////////////////////////////////////////////////////////////////////////////
 
 	include 'dashboard.html.php';
