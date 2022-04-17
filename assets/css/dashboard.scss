@@ -1,14 +1,10 @@
-body {
-  background-color: var(--bg-clr);
-}
-
 .bookingCard {
   min-height: 100px;
   width: 100%;
   border-radius: 7px;
 
   h4 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #fff;
   }
@@ -19,7 +15,7 @@ body {
     color: #fff;
   }
 
-  a {
+  button {
     color: var(--theme-clr);
     font-size: 0.75rem;
     font-weight: 500;
@@ -28,22 +24,18 @@ body {
 
 .bookingsList {
   .singleBooking {
-    display: block;
     padding: 24px 16px;
-    background-color: var(--sec-bg-clr);
-    border-radius: 7px;
-    color: var(--txt-clr);
-    text-decoration: none;
 
     &:not(:first-child) {
-      margin-top: 1em;
+      margin-top: 1rem;
     }
 
     .bookingHeader {
       display: grid;
-      grid-template-columns: 45px auto;
+      grid-template-columns: 45px auto 20px;
+      grid-column-gap: 1rem;
 
-      .icon {
+      .vehicleIcon {
         height: 45px;
         width: 45px;
         border-radius: 7px;
@@ -52,17 +44,19 @@ body {
       }
 
       .title {
-        margin-left: 1em;
-
-        h4 {
-          font-size: 0.9rem;
-        }
-
         h6 {
-          font-size: 0.7rem;
           color: var(--dark-grey-txt);
           margin-top: 0.5em;
         }
+      }
+
+      .nextIcon {
+        height: 20px;
+        width: 20px;
+        background-color: var(--ter-bg-clr);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
       }
     }
 
@@ -83,6 +77,69 @@ body {
           .value {
             font-size: 0.9rem;
             margin-top: 0.3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.inputGroup {
+  select,
+  label {
+    background-color: var(--sec-bg-clr);
+  }
+}
+
+.trackPopup {
+  .popupContent {
+    .popupBody {
+      .timeline {
+        border-left: 2px dotted var(--inverse-grey-txt);
+
+        .singleLine {
+          position: relative;
+          padding-left: 10px;
+
+          &:not(:first-child) {
+            margin-top: 3.5rem;
+          }
+
+          .checkmark {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: calc(-1.5rem - 10px);
+            height: 20px;
+            width: 20px;
+            background-color: var(--inverse-grey-txt);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            display: grid;
+            place-items: center;
+
+            i {
+              color: #fff;
+              font-size: 0.5rem;
+            }
+          }
+
+          &.crossed {
+            .checkmark {
+              background-color: var(--theme-clr);
+            }
+
+            &::after {
+              position: absolute;
+              content: "";
+              top: 50%;
+              left: calc(-1.5rem - 15px);
+              height: 30px;
+              width: 30px;
+              background-color: rgba(252, 118, 0, 0.3);
+              border-radius: 50%;
+              transform: translateY(-50%);
+            }
           }
         }
       }

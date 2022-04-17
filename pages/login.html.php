@@ -8,8 +8,8 @@
 
     <?php include "../header.html.php"; ?>
 
-    <link rel="stylesheet" href="./assets/css/common.css">
-    <link rel="stylesheet" href="./assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
 </head>
 <body>
     <div class="header">

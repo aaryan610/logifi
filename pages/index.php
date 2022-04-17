@@ -117,6 +117,12 @@
 		exit();
 	}
 
+	if(isset($_GET['page']) and $_GET['page']=='my-bookings')
+	{
+		include 'my-bookings.html.php';
+		exit();
+	}
+
 ////////////////////////////////////////////////////////////////////////////////
 
 	include 'dashboard.html.php';
