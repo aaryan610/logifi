@@ -65,6 +65,10 @@ a {
   color: var(--theme-clr);
 }
 
+a:hover, a:focus {
+  color: var(--theme-clr);
+}
+
 ::-moz-selection {
   background-color: var(--theme-clr);
   color: #fff;
@@ -83,6 +87,20 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-clr);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--sec-bg-clr);
+  border-radius: 5px;
 }
 
 .textTheme {
@@ -454,6 +472,15 @@ footer .links .singleLink.active .icon::after, footer .links .singleLink:hover .
   bottom: 0 !important;
 }
 
+.popupGrind .mainPopup .popupContent .closePopup {
+  cursor: pointer;
+}
+
+.popupGrind .mainPopup .popupContent .inputGroup select,
+.popupGrind .mainPopup .popupContent .inputGroup label {
+  background-color: var(--sec-bg-clr);
+}
+
 .secCard {
   background-color: var(--sec-bg-clr);
   border-radius: 7px;
@@ -470,6 +497,30 @@ footer .links .singleLink.active .icon::after, footer .links .singleLink:hover .
   body footer {
     width: 500px;
   }
+}
+
+.bookingCard {
+  min-height: 100px;
+  width: 100%;
+  border-radius: 7px;
+}
+
+.bookingCard h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.bookingCard p {
+  font-size: 0.7rem;
+  margin: 0.5rem 0 1rem;
+  color: #fff;
+}
+
+.bookingCard button {
+  color: var(--theme-clr);
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .disclaimer {

@@ -17,6 +17,14 @@
 
     $url = "https://www.ulip.dpiit.gov.in/ulip/v1.0.0/user/login";
 
+    $header = array(
+        "Accept" => "application/json",
+        "authorization" => "Bearer ",
+        "Content-Type" => "application/json",
+        "Cache-Control" => "no-cache",
+        "postman-token" => "",
+    );
+
     $data_array = array(
         "username" => "Garud_usr",
         "password" => "Trans@07042022"

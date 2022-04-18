@@ -37,11 +37,17 @@ function popupGrind(name) {
 
   // Back button
   if (window.history && window.history.pushState) {
-    window.history.pushState("forward", null, "./#forward");
+    window.history.pushState(
+      "forward",
+      null,
+      window.location.pathname + "#forward"
+    );
 
     $(window).on("popstate", function () {
       closePopup();
     });
   }
 }
+
+$(".bottomPopup").css("bottom", "-" + $(this).height() + "px");
 // End Popups

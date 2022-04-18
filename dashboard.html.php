@@ -241,9 +241,6 @@
     <?php include "./scripts.html.php"; ?>
 
     <script>
-        $(".bookPopup .popupContent").css("bottom", "-" + $(".bookPopup .popupContent").height() + "px");
-        $(".trackPopup .popupContent").css("bottom", "-" + $(".trackPopup .popupContent").height() + "px");
-
         function trackBooking() {
             popupGrind("trackPopup");
         }

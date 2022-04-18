@@ -1,29 +1,6 @@
-.bookingCard {
-  min-height: 100px;
-  width: 100%;
-  border-radius: 7px;
-}
-
-.bookingCard h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-}
-
-.bookingCard p {
-  font-size: 0.7rem;
-  margin: 0.5rem 0 1rem;
-  color: #fff;
-}
-
-.bookingCard button {
-  color: var(--theme-clr);
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
 .bookingsList .singleBooking {
   padding: 24px 16px;
+  cursor: pointer;
 }
 
 .bookingsList .singleBooking:not(:first-child) {
@@ -84,11 +61,6 @@
   margin-top: 0.3em;
 }
 
-.inputGroup select,
-.inputGroup label {
-  background-color: var(--sec-bg-clr);
-}
-
 .trackPopup .popupContent .popupBody .timeline {
   border-left: 2px dotted var(--inverse-grey-txt);
 }
@@ -138,5 +110,27 @@
   border-radius: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.lineTabs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.lineTabs .singleTab {
+  text-align: center;
+  color: var(--dark-grey-txt);
+  border-bottom: 2px solid var(--dark-grey-txt);
+  padding-bottom: 0.7rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.lineTabs .singleTab.active {
+  color: var(--txt-clr);
+  border-color: var(--txt-clr);
 }
 /*# sourceMappingURL=dashboard.css.map */

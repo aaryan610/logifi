@@ -21,7 +21,11 @@
             <button type="button" class="btnWhite btn-sm">Book Now&nbsp;&nbsp;<i class="fas fa-angle-right"></i></button>
         </div>
         <div class="mt-4">
-            <h3 class="sectionTitle">Available Loads</h3>
+            <h3 class="sectionTitle">My Bookings</h3>
+            <div class="lineTabs my-4">
+                <h4 class="singleTab font-sm active">ONGOING</h4>
+                <h4 class="singleTab font-sm">PAST</h4>
+            </div>
             <div class="bookingsList mt-2">
                 <div class="singleBooking secCard" onclick="trackBooking();">
                     <div class="bookingHeader">
@@ -241,12 +245,14 @@
     <?php include "../scripts.html.php"; ?>
 
     <script>
-        $(".bookPopup .popupContent").css("bottom", "-" + $(".bookPopup .popupContent").height() + "px");
-        $(".trackPopup .popupContent").css("bottom", "-" + $(".trackPopup .popupContent").height() + "px");
-
         function trackBooking() {
             popupGrind("trackPopup");
         }
+
+        $(".singleTab").click(function() {
+            $(".singleTab.active").removeClass("active");
+            $(this).addClass("active");
+        });
     </script>
 </body>
 </html>

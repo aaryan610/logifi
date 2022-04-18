@@ -1,30 +1,7 @@
-.bookingCard {
-  min-height: 100px;
-  width: 100%;
-  border-radius: 7px;
-
-  h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-  }
-
-  p {
-    font-size: 0.7rem;
-    margin: 0.5rem 0 1rem;
-    color: #fff;
-  }
-
-  button {
-    color: var(--theme-clr);
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
-}
-
 .bookingsList {
   .singleBooking {
     padding: 24px 16px;
+    cursor: pointer;
 
     &:not(:first-child) {
       margin-top: 1rem;
@@ -84,13 +61,6 @@
   }
 }
 
-.inputGroup {
-  select,
-  label {
-    background-color: var(--sec-bg-clr);
-  }
-}
-
 .trackPopup {
   .popupContent {
     .popupBody {
@@ -143,6 +113,25 @@
           }
         }
       }
+    }
+  }
+}
+
+.lineTabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .singleTab {
+    text-align: center;
+    color: var(--dark-grey-txt);
+    border-bottom: 2px solid var(--dark-grey-txt);
+    padding-bottom: 0.7rem;
+    cursor: pointer;
+    transition: 0.3s all ease;
+
+    &.active {
+      color: var(--txt-clr);
+      border-color: var(--txt-clr);
     }
   }
 }

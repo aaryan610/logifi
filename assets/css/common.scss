@@ -88,6 +88,11 @@ p {
 
 a {
   color: var(--theme-clr);
+
+  &:hover,
+  &:focus {
+    color: var(--theme-clr);
+  }
 }
 
 ::selection {
@@ -104,6 +109,22 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-clr);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--sec-bg-clr);
+  border-radius: 5px;
+}
+// End Scrollbar
 
 // Fonts
 .textTheme {
@@ -446,6 +467,17 @@ footer {
           bottom: 0 !important;
         }
       }
+
+      .closePopup {
+        cursor: pointer;
+      }
+
+      .inputGroup {
+        select,
+        label {
+          background-color: var(--sec-bg-clr);
+        }
+      }
     }
   }
 }
@@ -470,6 +502,32 @@ footer {
     }
   }
 }
+
+// Booking card
+.bookingCard {
+  min-height: 100px;
+  width: 100%;
+  border-radius: 7px;
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  p {
+    font-size: 0.7rem;
+    margin: 0.5rem 0 1rem;
+    color: #fff;
+  }
+
+  button {
+    color: var(--theme-clr);
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+}
+// End Booking card
 
 // 000Webhost Disclaimer
 .disclaimer {
